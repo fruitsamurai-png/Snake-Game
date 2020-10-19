@@ -14,13 +14,15 @@
 
 #include "cprocessing.h"
 #include "move.h"
+#include "food.h"
 // use CP_Engine_SetNextGameState to specify this function as the initialization function
 // this function will be called once at the beginning of the program
 void game_init(void)
 {
 	// initialize variables and CProcessing settings for this gamestate
 	CP_System_SetWindowSize(380, 400);
-	move_init();	
+	move_init();
+	food_init();
 }
 
 // use CP_Engine_SetNextGameState to specify this function as the update function
@@ -29,6 +31,7 @@ void game_update(void)
 {
 	// check input, update simulation, render etc.
 	move_update();
+	food_update();
 }
 
 // use CP_Engine_SetNextGameState to specify this function as the exit function
@@ -37,6 +40,7 @@ void game_exit(void)
 {
 	// shut down the gamestate and cleanup any dynamic memory
 	move_exit();
+	food_exit();
 }
 
 // main() the starting point for the program
