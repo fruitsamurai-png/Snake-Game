@@ -20,13 +20,13 @@ void move_update(void)
 {
 	double delta = 0.8;//delta time to reduce the speed of the snake. Xuan u need to implement this delta time to your power up.
 	CP_Settings_Background(CP_Color_Create(0, 0, 0, 255));//refresh the scene with the background.
-	if (CP_Input_KeyTriggered(KEY_W))//to choose the direction of the snake
+	if (CP_Input_KeyTriggered(KEY_W) && snake.dir!=2)//to choose the direction of the snake
 		snake.dir = 0;
-	else if (CP_Input_KeyTriggered(KEY_A))
+	else if (CP_Input_KeyTriggered(KEY_A) && snake.dir !=3)
 		snake.dir = 1;
-	else if (CP_Input_KeyTriggered(KEY_S))
+	else if (CP_Input_KeyTriggered(KEY_S) && snake.dir != 0)
 		snake.dir = 2;
-	else if (CP_Input_KeyTriggered(KEY_D))
+	else if (CP_Input_KeyTriggered(KEY_D) && snake.dir != 1)
 		snake.dir = 3;
 		if (snake.dir==0)
 		{
