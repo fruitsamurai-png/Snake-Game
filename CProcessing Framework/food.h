@@ -1,7 +1,7 @@
 #pragma once
 struct food
 {
-	int a, b;
+	int x, y,foodcount;
 }food;
 
 void food_init(void);
