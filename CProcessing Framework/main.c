@@ -15,13 +15,16 @@
 #include "cprocessing.h"
 #include "Game.h"
 #include "food.h"
+#include "mainmenu.h"
+#include "gameover.h"
+#include "main.h"
+#include <stdio.h>
 
 // use CP_Engine_SetNextGameState to specify this function as the initialization function
 // this function will be called once at the beginning of the program
 void game_init(void)
 {
 	// initialize variables and CProcessing settings for this gamestate
-	CP_System_SetWindowSize(400, 400);
 	Snake_init();
 	Food_init();
 }
@@ -31,8 +34,8 @@ void game_init(void)
 void game_update(void)
 {
 	// check input, update simulation, render etc.
-	Snake_update();
-	Food_update();
+	Snake_update();			//I HIGHLY SUGGEST ONLY USING ONE GAMESTATE AT ONCE, BECAUSE RUNNING 2 GAMESTATES AT ONCE LIKE THIS MAY CAUSE ISSUES WITH YOUR DATA, AND YOU MUST REALLY KNOW EXACTLY WHAT'S HAPPENING IN EACH FRAME
+	Food_update();			//AND WITH 2 UPDATES RUNNING AT ONCE YOU NEEDA WORRY ABOUT WHATS HAPPENING IN EACH FRAME IN EACH UPDATE AT ONCE WHICH MAY BE A BIT HARD UNLESS YOUR CODING IS SUPER STRONG OK BYE
 }
 
 // use CP_Engine_SetNextGameState to specify this function as the exit function
@@ -49,7 +52,11 @@ void game_exit(void)
 // CP_Engine_Run() is the core function that starts the simulation
 int main(void)
 {
-	CP_Engine_SetNextGameState(game_init, game_update, game_exit);
+	CP_System_SetWindowSize(800, 800);
+	CP_System_ShowConsole();
+	freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
+
+	CP_Engine_SetNextGameState(mainmenu_init, mainmenu_update, mainmenu_exit);
 	CP_Engine_Run();
 	return 0;
 }

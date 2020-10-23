@@ -19,13 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="button.c" />
     <ClCompile Include="food.c" />
     <ClCompile Include="Game.c" />
+    <ClCompile Include="gameover.c" />
+    <ClCompile Include="howtoplay.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="mainmenu.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="button.h" />
     <ClInclude Include="food.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="gameover.h" />
+    <ClInclude Include="howtoplay.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="mainmenu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -4,9 +4,18 @@
     <ClCompile Include="food.c" />
     <ClCompile Include="Game.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="button.c" />
+    <ClCompile Include="gameover.c" />
+    <ClCompile Include="mainmenu.c" />
+    <ClCompile Include="howtoplay.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="food.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="button.h" />
+    <ClInclude Include="gameover.h" />
+    <ClInclude Include="mainmenu.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="howtoplay.h" />
   </ItemGroup>
 </Project>
