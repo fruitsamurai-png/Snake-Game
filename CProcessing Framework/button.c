@@ -4,7 +4,6 @@
 #include "mainmenu.h"
 #include "gameover.h"
 #include "howtoplay.h"
-#include <stdio.h>
 
 void play(Button button)
 {
@@ -15,7 +14,6 @@ void play(Button button)
 			CP_Input_GetMouseY() >= button.yposition - button.sizey / 2 &&
 			CP_Input_GetMouseY() <= button.yposition + button.sizey / 2)
 		{
-			printf("play");
 			CP_Engine_SetNextGameState(game_init, game_update, game_exit);
 		}
 	}
@@ -30,7 +28,6 @@ void howtoplay(Button button)
 			CP_Input_GetMouseY() >= button.yposition - button.sizey / 2 &&
 			CP_Input_GetMouseY() <= button.yposition + button.sizey / 2)
 		{
-			printf("how to play");
 			CP_Engine_SetNextGameState(howtoplay_init, howtoplay_update, howtoplay_exit);
 		}
 	}
@@ -45,7 +42,7 @@ void exitgame(Button button)
 			CP_Input_GetMouseY() >= button.yposition - button.sizey / 2 &&
 			CP_Input_GetMouseY() <= button.yposition + button.sizey / 2)
 		{
-			printf("exit");
+		
 			CP_Engine_Terminate();
 		}
 	}
@@ -60,7 +57,6 @@ void menu(Button button)
 			CP_Input_GetMouseY() >= button.yposition - button.sizey / 2 &&
 			CP_Input_GetMouseY() <= button.yposition + button.sizey / 2)
 		{
-			printf("menu");
 			CP_Engine_SetNextGameState(mainmenu_init, mainmenu_update, mainmenu_exit);
 		}
 	}
@@ -75,7 +71,6 @@ void restart(Button button)
 			CP_Input_GetMouseY() >= button.yposition - button.sizey / 2 &&
 			CP_Input_GetMouseY() <= button.yposition + button.sizey / 2)
 		{
-			printf("game");
 			CP_Engine_SetNextGameState(game_init, game_update, game_exit);
 		}
 	}

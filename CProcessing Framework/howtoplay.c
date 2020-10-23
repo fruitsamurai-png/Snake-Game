@@ -2,7 +2,6 @@
 #include "Cprocessing.h"
 #include "main.h"
 #include "mainmenu.h"
-#include <stdio.h>
 
 CP_Image controls;
 

@@ -28,9 +28,6 @@ void gameover_update(void)
 	CP_Image_Draw(restartButton.image, restartButton.xposition, restartButton.yposition, restartButton.sizex, restartButton.sizey, 255);
 	CP_Image_Draw(menuButton.image, menuButton.xposition, menuButton.yposition, menuButton.sizex, menuButton.sizey, 255);
 
-	printf("%d", food.foodcount * 100);
-	printf("%d", (int)score_timer);
-
 	restart(restartButton);
 	menu(menuButton);
 }
