@@ -17,7 +17,7 @@ void gameover_init(void)
 	WINDOW_HEIGHT = (float) CP_System_GetWindowHeight();
 	WINDOW_WIDTH = (float) CP_System_GetWindowWidth();
 
-	gameover = CP_Image_Load("./Assets/DigiPen_BLACK.png");
+	gameover = CP_Image_Load("./Assets/DigiPen_RED.png");
 	theend = CP_Image_Load("./Assets/Snake_GAMEOVER.png");
 	init_button3();
 }
@@ -25,8 +25,8 @@ void gameover_init(void)
 void gameover_update(void)
 {
 	CP_Settings_Background(CP_Color_Create(0, 0, 0, 255));
-	CP_Image_Draw(gameover, WINDOW_WIDTH / 2, WINDOW_HEIGHT *1/ 6, 100, 100, 255);
-	CP_Image_Draw(theend, WINDOW_WIDTH / 2, WINDOW_HEIGHT * 1 / 3, 150, 100, 255);
+	CP_Image_Draw(gameover, WINDOW_WIDTH / 2, WINDOW_HEIGHT *1/ 6, 200, 100, 255);
+	CP_Image_Draw(theend, WINDOW_WIDTH / 2, WINDOW_HEIGHT * 1 / 3, 150, 50, 255);
 	CP_Image_Draw(restartButton.image, restartButton.xposition, restartButton.yposition, restartButton.sizex, restartButton.sizey, 255);
 	CP_Image_Draw(menuButton.image, menuButton.xposition, menuButton.yposition, menuButton.sizex, menuButton.sizey, 255);
 

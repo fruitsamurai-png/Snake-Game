@@ -103,13 +103,13 @@ void init_button2(void) //howtoplay
 	playButton.xposition = WINDOW_WIDTH / 2;
 	playButton.yposition = WINDOW_HEIGHT * 3 / 4;
 	playButton.sizex = 100;
-	playButton.sizey = 100;
+	playButton.sizey = 50;
 
 	menuButton.image = CP_Image_Load("./Assets//Snake_MAINMENU.png");
 	menuButton.xposition = WINDOW_WIDTH / 2;
 	menuButton.yposition = WINDOW_HEIGHT * 7 / 8;
-	menuButton.sizex = 100;
-	menuButton.sizey = 100;
+	menuButton.sizex = 150;
+	menuButton.sizey = 50;
 }
 
 void init_button3(void) //gameover
@@ -118,11 +118,11 @@ void init_button3(void) //gameover
 	restartButton.xposition = WINDOW_WIDTH / 2;
 	restartButton.yposition = WINDOW_HEIGHT / 2;
 	restartButton.sizex = 100;
-	restartButton.sizey = 100;
+	restartButton.sizey = 50;
 
 	menuButton.image = CP_Image_Load("./Assets/Snake_MAINMENU.png");
 	menuButton.xposition = WINDOW_WIDTH / 2;
 	menuButton.yposition = WINDOW_HEIGHT * 3 / 4;
 	menuButton.sizex = 100;
-	menuButton.sizey = 100;
+	menuButton.sizey = 50;
 }
